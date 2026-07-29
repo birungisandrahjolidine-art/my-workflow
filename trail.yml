@@ -1,0 +1,22 @@
+name: Sandie workflow
+
+#  events that trigger this worlflow
+on:
+  # triggers on push to a branch 
+  push:
+    branches: [main]
+
+  # allows manual triggerig from the actions tab
+  workflow_dispatch:
+
+# jobs to run
+jobs:
+  # jon id or name
+  greet:
+    # the type of runner to use
+    runs-on: ubuntu-latest
+
+    # steps to execute in this job
+    steps:
+      - name: say hello
+        run: echo "Hello sandie!"
